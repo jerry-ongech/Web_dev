@@ -1,7 +1,19 @@
+<?php 
+echo file_get_contents("header.html")
+?>
+
 <!DOCTYPE html>
 <html>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("news.jpg");
+ 
+    height: 100%; 
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 form {
     border: 3px solid #f1f1f1;
@@ -35,11 +47,12 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
+
 </style>
 <body>
 
 
-<form action="/action_page.php">
+<form action="connect.php" method="POST">
   <div class="container">
     <h2>Subscribe to our Newsletter</h2>
     <p></p>
@@ -59,4 +72,7 @@ input[type=submit]:hover {
 </form>
 
 </body>
+<?php 
+echo file_get_contents("footer.html")
+?>
 </html>
