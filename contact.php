@@ -1,9 +1,30 @@
+<?php 
+echo file_get_contents("header.html")
+?>
+
 <!DOCTYPE html>
 <html>
+<style>
+body, html {
+    /* The image used */
+    background-image: url("contact.jpeg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+</style>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 input[type=text], select, textarea {
     width: 100%;
@@ -40,22 +61,28 @@ input[type=submit]:hover {
 <header>
 
     </header>
-<h3>We value your input</h3>
+<h3>Contact Us</h3>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="connect.php" method="POST">
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
 
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
+    <label for="email">Email Address</label>
+    <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
+    
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="knowledge is power" style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Let us know how we may assist you." style="height:200px"></textarea>
 
     <input type="submit" value="Submit">
   </form>
 </div>
 
 </body>
+<?php 
+echo file_get_contents("footer.html")
+?>
 </html>
